@@ -4,9 +4,13 @@
   "description": "Typescript helpers for compiling typescript while specifying `--noEmitHelpers` within your `tsconfig.json`. Cross platform ( Node/Browser/WebWorker )",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0",
-    "prepublish": "tsc",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -w"
+    "start": "tsc -w",
+    "pretest": "tsc",
+    "test": "mocha index.test.js",
+    "test:live": "npm start & npm test -- -w",
+    "prepublish": "npm run typings -- install && tsc",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -w",
+    "typings": "typings"
   },
   "bugs": {
     "url": "https://github.com/ngParty/ts-helpers/issues"
@@ -24,9 +28,12 @@
   "author": "Martin Hochel <hochelmartin@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "typescript": "1.8.10",
+    "chai": "3.5.0",
     "conventional-changelog": "1.1.0",
     "ghooks": "1.0.1",
+    "mocha": "2.4.5",
+    "typescript": "1.8.10",
+    "typings": "0.7.12",
     "validate-commit-msg": "2.0.0"
   },
   "config": {
