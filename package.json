@@ -27,6 +27,9 @@
   ],
   "author": "Martin Hochel <hochelmartin@gmail.com>",
   "license": "MIT",
+  "peerDependencies": {
+    "typescript": ">=1.8.0"
+  },
   "devDependencies": {
     "chai": "3.5.0",
     "conventional-changelog": "1.1.0",
