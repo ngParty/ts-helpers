@@ -1,4 +1,9 @@
 # TS-helpers
+
+[![Dependencies Status](https://david-dm.org/ngParty/ts-helpers.svg)](https://david-dm.org/ngParty/ts-helpers)
+[![devDependency Status](https://david-dm.org/ngParty/ts-helpers/dev-status.svg)](https://david-dm.org/ngParty/ts-helpers#info=devDependencies)
+[![npm](https://img.shields.io/npm/v/ts-helpers.svg)](https://www.npmjs.com/package/ts-helpers)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/ngParty/ts-helpers/master/LICENSE)
  
 Typescript helpers for compiling typescript while specifying `--noEmitHelpers` within your `tsconfig.json`.
 > Cross platform ( Node/Browser/WebWorker )
@@ -41,7 +46,7 @@ and set tsconfig `noEmitHelpers` like following example:
     "emitDecoratorMetadata": true,
     "moduleResolution": "node",
     "pretty": true,
-    "noEmitHelpers": true,
+    "noEmitHelpers": true
   },
   "exclude": [
     "node_modules"     
