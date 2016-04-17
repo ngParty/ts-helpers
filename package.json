@@ -1,0 +1,27 @@
+{
+  "name": "ts-helpers",
+  "version": "1.0.0",
+  "description": "Typescript helpers for compiling typescript while specifying `--noEmitHelpers` within your `tsconfig.json`. Cross platform ( Node/Browser/WebWorker )",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/ngParty/ts-helpers/issues"
+  },
+  "homepage": "https://github.com/ngParty/ts-helpers#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngParty/ts-helpers.git"
+  },
+  "keywords": [
+    "typescript",
+    "emit-helpers",
+    "payload"
+  ],
+  "author": "Martin Hochel <hochelmartin@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "1.8.10"
+  }
+}
