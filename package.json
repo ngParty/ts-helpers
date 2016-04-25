@@ -1,6 +1,6 @@
 {
   "name": "ts-helpers",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Typescript helpers for compiling typescript while specifying `--noEmitHelpers` within your `tsconfig.json`. Cross platform ( Node/Browser/WebWorker )",
   "main": "index.js",
   "scripts": {
