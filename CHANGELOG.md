@@ -1,3 +1,13 @@
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/ngParty/ts-helpers/compare/1.1.0...v1.1.1) (2016-04-25)
+
+
+### Bug Fixes
+
+* **ts-helpers:** support next minor pre release version of typescript ([11d7477](https://github.com/ngParty/ts-helpers/commit/11d7477)), closes [#1](https://github.com/ngParty/ts-helpers/issues/1)
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/ngParty/ts-helpers/compare/1.0.0...v1.1.0) (2016-04-17)
 
