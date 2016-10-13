@@ -5,8 +5,13 @@
 [![npm](https://img.shields.io/npm/v/ts-helpers.svg)](https://www.npmjs.com/package/ts-helpers)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/ngParty/ts-helpers/master/LICENSE)
  
-Typescript helpers for compiling typescript while specifying `--noEmitHelpers` within your `tsconfig.json`.
+Typescript helpers (TS <= 2.0) for compiling typescript while specifying `--noEmitHelpers` within your `tsconfig.json`.
 > Cross platform ( Node/Browser/WebWorker )
+
+## NOTE: Starting Typescript 2.1 this package won't be needed anymore
+
+Instead you can provide `--importHelpers` together with `--noEmitHelpers` which will import emit helpers from Typescript "tslib"
+More info: https://github.com/Microsoft/TypeScript/pull/9097
 
 ## Why?
 
