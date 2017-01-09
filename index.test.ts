@@ -53,4 +53,14 @@ describe( `ts-helpers`, () => {
 
   } );
 
+  describe( `__generator`, () => {
+
+    it( `should exists on global`, () => {
+
+      expect( hasOwnProperty.call( global, '__generator' ) ).to.equal( true );
+
+    } );
+
+  } );
+
 } );
