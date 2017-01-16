@@ -7,22 +7,27 @@ declare const global: any;
 declare const WorkerGlobalScope: any;
 declare const Reflect: any;
 declare var Promise: PromiseConstructor;
-interface PromiseConstructor{}
+interface PromiseConstructor { }
 interface Object { assign() }
 
 function __assignFn(t) {
   for (var s, i = 1, n = arguments.length; i < n; i++) {
     s = arguments[i];
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-    t[p] = s[p];
+      t[p] = s[p];
   }
   return t;
 }
 
 function __extendsFn(d, b) {
-  for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-  function __() { this.constructor = d; }
-  d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  var extendStatics = (Object as any).setPrototypeOf ||
+    ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+    function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+  return function (d, b) {
+    extendStatics(d, b);
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
 }
 
 function __decorateFn(decorators, target, key, desc) {
@@ -48,17 +53,17 @@ function __awaiterFn(thisArg, _arguments, P, generator) {
 }
 
 // hook global helpers
-(function(__global: any) {
+(function (__global: any) {
 
   __global.__assign = (__global && __global.__assign) || Object.assign || __assignFn;
   __global.__extends = (__global && __global.__extends) || __extendsFn;
   __global.__decorate = (__global && __global.__decorate) || __decorateFn;
   __global.__metadata = (__global && __global.__metadata) || __metadataFn;
   __global.__param = (__global && __global.__param) || __paramFn;
-  __global.__awaiter =(__global && __global.__awaiter) || __awaiterFn;
+  __global.__awaiter = (__global && __global.__awaiter) || __awaiterFn;
 
 })(
   typeof window !== "undefined" ? window :
-  typeof WorkerGlobalScope !== "undefined" ? self :
-  typeof global !== "undefined" ? global :
-  Function("return this;")());
+    typeof WorkerGlobalScope !== "undefined" ? self :
+      typeof global !== "undefined" ? global :
+        Function("return this;")());
